@@ -15,7 +15,9 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Coffee extends BaseEntity {
+
     private String name;
+
     @Type(type = "org.jadira.usertype.moneyandcurrency.joda.PersistentMoneyMinorAmount",
             parameters = {@org.hibernate.annotations.Parameter(name = "currencyCode", value = "CNY")})
     private Money price;
