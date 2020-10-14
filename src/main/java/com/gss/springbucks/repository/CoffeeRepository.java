@@ -1,7 +1,9 @@
 package com.gss.springbucks.repository;
 
 import com.gss.springbucks.model.Coffee;
-import org.springframework.data.repository.CrudRepository;
 
-public interface CoffeeRepository extends CrudRepository<Coffee, Long> {
+import java.util.List;
+
+public interface CoffeeRepository extends BaseRepository<Coffee, Long> {
+    List<Coffee> findByNameInOrderById(List<String> names);
 }
